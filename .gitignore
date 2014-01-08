@@ -1,18 +1,20 @@
-# Object files
-*.o
-*.ko
 
-# Libraries
-*.lib
-*.a
+#include<stdio.h>
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
+ main()
+ {
+ int i, j, n, temp;
+ printf("Enter the number of rows in pyramid of stars you wish to see ");
+ scanf("%d",&n);
+ temp = n;
+ for ( i = 1 ; i <= n ; i++ ){
+ for ( j = 1 ; j < temp ; j++ )
+ printf(" ");
+ temp--;
+ for ( j = 1 ; j <= 2*i - 1 ; j++ )
+ printf("*");
+ printf(" ");
+    }
+ getch();
+ return 0;
+ }
